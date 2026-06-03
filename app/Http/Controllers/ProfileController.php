@@ -18,10 +18,11 @@ class ProfileController extends Controller
             ->orderBy('fecha', 'desc')
             ->get();
 
-        $visitaFavorita = $user->visitas()
-            ->select('atraccion_id', DB::raw('count(*) as total'))
+                $visitaFavorita = $user->visitas()
+            ->select('atraccion_id', DB::raw('count(*) as total'), DB::raw('MAX(fecha) as ultima_visita'))
             ->groupBy('atraccion_id')
             ->orderBy('total', 'desc')
+            ->orderBy('ultima_visita', 'desc')
             ->first();
 
         $atraccionFavorita = null;
