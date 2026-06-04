@@ -35,7 +35,6 @@
     <div class="alert alert-success mt-3">{{ session('success') }}</div>
 @endif
 
-
 <div class="card shadow mt-3">
     <div class="card-header">Generar análisis</div>
     <div class="card-body">
