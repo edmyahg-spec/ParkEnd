@@ -35,10 +35,6 @@
     <div class="alert alert-success mt-3">{{ session('success') }}</div>
 @endif
 
-<div class="alert alert-info mt-3">
-    La ruta óptima se genera ordenando las atracciones por menor porcentaje de ocupación.
-    Primero se sugieren las atracciones con menor saturación.
-</div>
 
 <div class="card shadow mt-3">
     <div class="card-header">Generar análisis</div>
